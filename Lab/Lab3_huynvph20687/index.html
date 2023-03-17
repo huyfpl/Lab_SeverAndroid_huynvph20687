@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3</title>
+</head>
+<body>
+    <form >
+        <label for="num1">Số thứ nhất:</label>
+        <input type="number"  id="so1" required>
+        <br>
+        <label for="num2">Số thứ hai:</label>
+        <input type="number" id="so2" required>
+        <br>
+        <div style="font-weight: bold; font-size: 30px;">kết quả</div>
+        <h1 id="kq">huy17</h1>
+        <button type="submit" id="tru">Tính trừ</button>
+        <button type="submit" id="nhan">Tính nhân</button>
+        <button type="submit" id="chia">Tính chia</button>
+        <button type="submit" id="cong">Tính cộng</button>
+      </form>
+</body>
+<script src="tinhtoan.js"></script>
+<!-- <script>
+    
+    const so1 = document.getElementById('so1');
+const so2 = document.getElementById('so2');
+const ketqua = document.getElementById('kq');
+const btncong = document.getElementById('cong');
+const btntru = document.getElementById('tru');
+const btnnhan = document.getElementById('nhan');
+const btnchia = document.getElementById('chia');
+
+btncong.addEventListener('click', function() {
+  const a = parseFloat(so1.value);
+  const b = parseFloat(so2.value);
+  const result = cong(a, b);
+  ketqua.innerHTML = result;
+});
+
+btntru.addEventListener('click', function() {
+  const a = parseFloat(so1.value);
+  const b = parseFloat(so2.value);
+  const result = tru(a, b);
+  ketqua.innerHTML = result;
+});
+
+btnnhan.addEventListener('click', function() {
+  const a = parseFloat(so1.value);
+  const b = parseFloat(so2.value);
+  const result = nhan(a, b);
+  ketqua.innerHTML = result;
+});
+
+btnchia.addEventListener('click', function() {
+  const a = parseFloat(so1.value);
+  const b = parseFloat(so2.value);
+  const result = chia(a, b);
+  ketqua.innerHTML = result;
+});
+
+const cong = (a, b) => {
+  return a + b;
+}
+
+const tru = (a, b) => {
+  return a - b;
+}
+
+const nhan = (a, b) => {
+  return a * b;
+}
+
+const chia = (a, b) => {
+  return a / b;
+}
+
+</script> -->
+</html>
