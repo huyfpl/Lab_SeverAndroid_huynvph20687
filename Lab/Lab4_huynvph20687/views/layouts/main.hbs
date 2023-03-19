@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>Example App</title>
 </head>
 <body>
-    <h1>hí nhô huy nhé </h1>
+
+    {{#if showTitle}}
+    <h1>Tieu de trang Web - Hbs Template</h1>
+    {{/if}}
+
+    {{#if showBody}}
+    {{{body}}}
+    {{/if}}
+
+    {{#if showContentTinhToan}}
+    <h2>So A: {{soA}}</h2>
+    <h2>So B: {{soB}}</h2>
+    <h2>Phep tinh: {{operator}}</h2>
+    <h2>Ket qua: {{kq}}</h2>
+    {{/if}}
+
 </body>
 </html>
