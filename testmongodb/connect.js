@@ -23,6 +23,57 @@ app.get('/sach', async (req, res) => {
         res.status(500).send(e);
     }
 });
+app.get("/update_sach", async (request, response) => {
+
+    await mongoose.connect(url).then(console.log('Ket noi DB thanh cong.'));
+
+    try {
+        var kq = await sachModel.updateOne({tensach: 'cuu am chan kinh'}, {tensach: 'võ thuật hong kong', gia: 25000});
+
+        console.log(kq);
+
+        //await sach.save();
+        response.send(kq);
+    } catch (error) {
+        response.status(500).send(error);
+    }
+});
+
+app.get("/xoa_sach", async (request, response) => {
+
+    await mongoose.connect(url).then(console.log('Ket noi DB thanh cong.'));
+
+    try {
+        var kq = await sachModel.findOneAndRemove({tensach: 'cuu am chan kinh'});
+
+        console.log(kq);
+
+        //await sach.save();
+        response.send(kq);
+    } catch (error) {
+        response.status(500).send(error);
+    }
+});
+
+app.get("/add_sach", async (request, response) => {
+
+    await mongoose.connect(url).then(console.log('Ket noi DB thanh cong.'));
+
+    let sach = new sachModel({
+        tensach: 'võ công',
+        gia: 22322
+    });
+
+    sach.tonkho = 100;
+
+    try {
+        console.log(sach);
+        await sach.save();
+        response.send(sach);
+    } catch (error) {
+        response.status(500).send(error);
+    }
+});
 
 
 
