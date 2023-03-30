@@ -6,13 +6,23 @@ const sach = new mongoose.Schema({
     },
     gia: {
         type: Number,
-        default: 3000
+        require: true
     },
-    tonkho: {
+    soluong: {
         type: Number,
-        default: 100
+        require: true
     },
+    chitiet: {
+        type: String,
+        require: true
+    },
+    image: {
+        type: String,
+        require: true
+    },
+    
+
 
 })
 const sachModel=mongoose.model('sach',sach)
-module.exports=sachModel;
+module.exports={sachModel};
